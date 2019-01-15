@@ -1,0 +1,10 @@
+.parallax-box {
+  /* position: relative; */
+  height: 100vh;
+  background-image: url('./images/pexels-photo-509922.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* transform: translateY(-64px); */
+}

@@ -1,0 +1,14 @@
+.social-links-footer {
+  display: flex;
+  justify-content: center;
+}
+.social-links-footer a {
+  font-size: 26px;
+  padding: 0 10px 0 10px;
+}
+
+@media (min-width: 992px) {
+  .social-links-footer {
+    display: unset;
+  }
+}
