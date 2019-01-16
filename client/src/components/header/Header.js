@@ -7,22 +7,25 @@ import socialLinks from '../links/socialLinks';
 import './Header.css';
 
 class Header extends Component {
-  state = { navbarSticky: '' };
+  state = { navbarSticky: '', mainPaddingTop: '' };
 
   componentDidMount() {
     const sidenav = document.querySelector('.sidenav');
     M.Sidenav.init(sidenav);
 
+    // sticky navbar on scroll
     window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('.nav');
-      let sticky = navbar.offsetTop;
-      // console.log(window.pageYOffset);
-      // console.log(sticky);
+      const topBarHeight = document.querySelector('.top-bar').clientHeight;
+      const navBarHeight = document.querySelector('.nav').clientHeight;
+      const main = document.querySelector('.main');
 
-      if (window.pageYOffset > sticky) {
+      if (window.scrollY > topBarHeight) {
         this.setState({ navbarSticky: ' sticky' });
-      } else {
+        main.style['padding-top'] = `${navBarHeight}px`;
+      }
+      if (window.scrollY < topBarHeight) {
         this.setState({ navbarSticky: '' });
+        main.style['padding-top'] = '0px';
       }
     });
   }
@@ -59,7 +62,9 @@ class Header extends Component {
                     <div className="widget-text">
                       <div className="valign-wrapper white-text">
                         <i className="material-icons">phone</i>
-                        (714) 288-1300
+                        <a href="tel:+17142881300">
+                          <u className="white-text">(714) 288-1300</u>
+                        </a>
                       </div>
                       <div className="valign-wrapper white-text">
                         <i className="material-icons">place</i>
@@ -99,7 +104,6 @@ class Header extends Component {
             </div>
           </div>
         </nav>
-
         <ul className="sidenav" id="mobile-nav">
           {this.renderLinks()}
         </ul>

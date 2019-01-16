@@ -6,11 +6,7 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
-}
-
-.sticky + .main {
-  padding-top: 0px;
+  /* width: 100%; */
 }
 
 .top-bar {
@@ -38,9 +34,13 @@
   padding: 0 10px;
 }
 
+.nav {
+  background-color: rgba(238, 110, 115, 1);
+}
+
 .nav-wrapper {
   z-index: 1;
-  /* background-color: #fff; */
+  /* background-color: rgba(238, 110, 115, 0.5); */
 }
 
 .sidenav-trigger {

@@ -1,4 +1,6 @@
 import React from 'react';
+import Pricing from '../pricing/Pricing';
+
 import './Landing.css';
 
 const Landing = () => {
@@ -7,9 +9,10 @@ const Landing = () => {
       <section className="row">
         <div className="parallax-box" />
       </section>
-      <section className="row gretting">
-        <h5>Welcome to</h5>
-        <h3>New York Styles Salon & Spa</h3>
+      <section className="row pricing">
+        <div className="col s12">
+          <Pricing />
+        </div>
       </section>
     </main>
   );
