@@ -12,7 +12,12 @@ class Pricing extends Component {
 
   renderSubServices(info) {
     return _.map(info, ({ subservice, price, detail }) => {
-      return <li key={subservice}>{`${subservice} - ${price}`}</li>;
+      return (
+        <li key={subservice} className="d-flex justify-content-between">
+          <div>{subservice}</div>
+          <div>{price}</div>
+        </li>
+      );
     });
   }
 

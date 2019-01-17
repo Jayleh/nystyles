@@ -9,7 +9,7 @@ export default [
       },
       {
         subservice: 'Cut with Styling',
-        price: '$60 & Up',
+        price: 'from $60',
         detail: ''
       },
       {
@@ -19,32 +19,32 @@ export default [
       },
       {
         subservice: 'Highlights',
-        price: '$45 & Up',
+        price: 'from $45',
         detail: ''
       },
       {
         subservice: 'Ombre',
-        price: '$60 & Up',
+        price: 'from $60',
         detail: ''
       },
       {
         subservice: 'Weave',
-        price: '$50 & Up',
+        price: 'from $50',
         detail: ''
       },
       {
         subservice: 'Perm',
-        price: '$70 & Up',
+        price: 'from $70',
         detail: ''
       },
       {
         subservice: 'Up Do',
-        price: '$50 & Up',
+        price: 'from $50',
         detail: ''
       },
       {
         subservice: 'More',
-        price: '$200 & Up',
+        price: 'from $200',
         detail: ''
       }
     ]
@@ -119,7 +119,7 @@ export default [
       },
       {
         subservice: 'Fix Nail',
-        price: '$3 & Up',
+        price: 'from $3',
         detail: ''
       }
     ]

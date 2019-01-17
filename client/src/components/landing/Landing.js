@@ -9,9 +9,11 @@ const Landing = () => {
       <section className="row">
         <div className="parallax-box" />
       </section>
-      <section className="row pricing">
-        <div className="col s12">
-          <Pricing />
+      <section className="container pricing">
+        <div className="row">
+          <div className="col s12">
+            <Pricing />
+          </div>
         </div>
       </section>
     </main>
