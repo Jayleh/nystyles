@@ -12,11 +12,7 @@ class Pricing extends Component {
 
   renderSubServices(info) {
     return _.map(info, ({ subservice, price, detail }) => {
-      return (
-        <li key={subservice}>
-          <h5>{`${subservice} - $${price}`}</h5>
-        </li>
-      );
+      return <li key={subservice}>{`${subservice} - ${price}`}</li>;
     });
   }
 
