@@ -1,5 +1,5 @@
 .header {
-  /* position: relative; */
+  position: relative;
   z-index: 998 !important;
 }
 
@@ -35,7 +35,14 @@
 }
 
 .nav {
-  background-color: rgba(238, 110, 115, 1);
+  /* background-color: rgba(238, 110, 115, 1); */
+  background-color: white;
+}
+
+.brand-logo,
+.header-link a,
+.sidenav-trigger {
+  color: black !important;
 }
 
 .nav-wrapper {
@@ -46,7 +53,6 @@
 .sidenav-trigger {
   border: none;
   background-color: transparent;
-  color: #fff;
   cursor: pointer;
 }
 

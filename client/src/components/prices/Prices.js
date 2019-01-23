@@ -1,33 +1,36 @@
 import React from 'react';
-import pricingInfo from '../pricing/pricingInfo';
+import Banner from '../banner/Banner';
+import PricesTable from './PricesTable';
+
+import './Prices.css';
 
 const Prices = () => {
-  const renderPricingTable = (header, service, price) => {
-    return (
-      <React.Fragment>
-        <h4>{header}</h4>
-        <ul>
-          <li className="d-flex justify-content-between">
-            <div>{service}</div>
-            <div>{price}</div>
-          </li>
-        </ul>
-      </React.Fragment>
-    );
-  };
-
   return (
     <main>
+      <Banner title="CHECK OUR PRICES" />
       <div className="container">
         <div className="row">
           <div className="col s12 l6">
-            <h4>Title</h4>
-            <ul>
-              <li className="d-flex justify-content-between">
-                <div>Service</div>
-                <div>Price</div>
-              </li>
-            </ul>
+            <PricesTable header="Hair" />
+          </div>
+          <div className="col s12 l6">
+            <PricesTable header="Nails" />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col s12 l6">
+            <PricesTable header="Acrylic Nails" />
+          </div>
+          <div className="col s12 l6">
+            <PricesTable header="Facials & Waxing" />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col s12 l6">
+            <PricesTable header="Facial Therapies" />
+          </div>
+          <div className="col s12 l6">
+            <PricesTable header="Body Waxing" />
           </div>
         </div>
       </div>

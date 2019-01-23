@@ -1,6 +1,7 @@
 export default [
   {
     service: 'Hair',
+    title: 'Hair',
     info: [
       {
         subservice: 'Cut',
@@ -51,6 +52,7 @@ export default [
   },
   {
     service: 'Nails',
+    title: 'Nails',
     info: [
       {
         subservice: 'Manicure',
@@ -91,6 +93,7 @@ export default [
   },
   {
     service: 'Acrylic Nails',
+    title: 'Acrylic Nails',
     info: [
       {
         subservice: 'Regular',
@@ -126,6 +129,7 @@ export default [
   },
   {
     service: 'Facials & Waxing',
+    title: 'Facials & Waxing',
     info: [
       {
         subservice: 'Forehead',
@@ -171,6 +175,7 @@ export default [
   },
   {
     service: 'Facial Therapies',
+    title: 'Facial Therapies',
     info: [
       {
         subservice: 'European',
@@ -206,6 +211,7 @@ export default [
   },
   {
     service: 'Body Waxing',
+    title: 'Body Waxing',
     info: [
       {
         subservice: 'Bikini Line',

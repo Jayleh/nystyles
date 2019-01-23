@@ -19,14 +19,16 @@ class Header extends Component {
       const navBarHeight = document.querySelector('.nav').clientHeight;
       const main = document.querySelector('.main');
 
-      if (window.scrollY > topBarHeight) {
-        this.setState({ navbarSticky: ' sticky' });
-        main.style['padding-top'] = `${navBarHeight}px`;
-      }
-      if (window.scrollY < topBarHeight) {
-        this.setState({ navbarSticky: '' });
-        main.style['padding-top'] = '0px';
-      }
+      try {
+        if (window.scrollY > topBarHeight) {
+          this.setState({ navbarSticky: ' sticky' });
+          main.style['padding-top'] = `${navBarHeight}px`;
+        }
+        if (window.scrollY < topBarHeight) {
+          this.setState({ navbarSticky: '' });
+          main.style['padding-top'] = '0px';
+        }
+      } catch {}
     });
   }
 
@@ -43,7 +45,7 @@ class Header extends Component {
   renderLinks = () => {
     return _.map(headerLinks, ({ link, label }) => {
       return (
-        <li key={label}>
+        <li key={label} className="header-link">
           <Link to={link}>{label}</Link>
         </li>
       );
