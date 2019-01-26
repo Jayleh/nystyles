@@ -21,6 +21,12 @@ class Landing extends Component {
           <div className="row center">
             <h5>Welcome to</h5>
             <h4>New York Styles Salon & Spa</h4>
+            <h4>You will like to look like goddes every day!</h4>
+            <h5>
+              Paradise products combine botanical and advanced cosmeceutical
+              ingredients with the Science of Beauty to bring you the ultimate
+              in professional skincare in a retail form.
+            </h5>
           </div>
         </section>
         <section className="container">

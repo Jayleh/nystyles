@@ -1,3 +1,9 @@
 .carousel {
   z-index: 996 !important;
+  /* height: 400px !important; */
+}
+
+.carousel-item img {
+  width: 50% !important;
+  border-radius: 50%;
 }
