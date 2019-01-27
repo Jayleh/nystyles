@@ -1,30 +1,54 @@
+import _ from 'lodash';
 import React from 'react';
 
 import './Carousel.css';
 
-const Carousel = () => {
-  return (
-    <div className="carousel carousel-slider">
-      <div className="carousel-item valign-wrapper">
-        <img src="https://lorempixel.com/250/250/nature/1" />
-        <div>Nails</div>
-        <div>price</div>
-      </div>
-      <a className="carousel-item" href="#one!" />
-      <a className="carousel-item" href="#two!">
-        <img src="https://lorempixel.com/250/250/nature/2" />
-      </a>
-      <a className="carousel-item" href="#three!">
-        <img src="https://lorempixel.com/250/250/nature/3" />
-      </a>
-      <a className="carousel-item" href="#four!">
-        <img src="https://lorempixel.com/250/250/nature/4" />
-      </a>
-      <a className="carousel-item" href="#five!">
-        <img src="https://lorempixel.com/250/250/nature/5" />
-      </a>
-    </div>
-  );
+const Carousel = ({ content }) => {
+  const renderContent = () => {
+    if (content.type === 'hero') {
+      return _.map(content.content, ({ imgSrc, imgAlt }) => {
+        return (
+          <div key={imgAlt} className="carousel-item">
+            <img src={imgSrc} alt={imgAlt} />
+          </div>
+        );
+      });
+    }
+
+    if (content.type === 'services') {
+      return _.map(content.content, ({ imgSrc, imgAlt, title, price }) => {
+        return (
+          <div
+            key={title}
+            className="carousel-item valign-wrapper flex-column justify-content-center"
+          >
+            <img src={imgSrc} alt={imgAlt} className="circle" />
+            <div>{title}</div>
+            <div>{price}</div>
+          </div>
+        );
+      });
+    }
+
+    if (content.type === 'testimonials') {
+      return _.map(content.content, ({ review, name, location }) => {
+        return (
+          <div
+            key={name}
+            className="carousel-item transparent valign-wrapper flex-column justify-content-center"
+            href="#one!"
+          >
+            <div className="review-icon">"</div>
+            <div className="center">{review}</div>
+            <div>{name}</div>
+            <div>{location}</div>
+          </div>
+        );
+      });
+    }
+  };
+
+  return <div className="carousel carousel-slider">{renderContent()}</div>;
 };
 
 export default Carousel;

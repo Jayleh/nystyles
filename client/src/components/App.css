@@ -2,10 +2,22 @@
   display: flex !important;
 }
 
+.flex-column {
+  flex-direction: column !important;
+}
+
 .justify-content-between {
   justify-content: space-between !important;
 }
 
+.justify-content-center {
+  justify-content: center !important;
+}
+
 .mb0 {
   margin-bottom: 0 !important;
+}
+
+.btn {
+  background: linear-gradient(to right, #aaaaff, #fcbaf8);
 }

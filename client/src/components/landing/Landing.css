@@ -8,3 +8,22 @@
   /* background-attachment: fixed; */
   /* transform: translateY(-64px); */
 }
+
+.reviews {
+  position: relative;
+}
+
+.reviews .parallax-container {
+  height: 400px !important;
+}
+
+.reviews .parallax img {
+  /* min-width: unset !important;
+  width: 100% !important; */
+  height: auto;
+}
+
+.gallery img {
+  width: 150px;
+  margin-bottom: 10px;
+}

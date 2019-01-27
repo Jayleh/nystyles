@@ -1,3 +1,7 @@
+.page-footer {
+  background: linear-gradient(to right, #aaaaff, #fcbaf8);
+}
+
 .social-links-footer {
   display: flex;
   justify-content: center;

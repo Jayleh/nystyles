@@ -1,9 +1,40 @@
 .carousel {
   z-index: 996 !important;
-  /* height: 400px !important; */
 }
 
-.carousel-item img {
+.carousel-hero .carousel,
+.carousel-hero .carousel-item {
+  height: 400px !important;
+}
+
+.carousel-hero .carousel-item {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-hero .carousel-item img {
+  width: unset !important;
+  height: 100%;
+}
+
+.carousel-services .carousel-item img {
   width: 50% !important;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+}
+
+.carousel-reviews {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carousel-reviews .carousel.carousel-slider {
+  height: 400px !important;
+}
+
+.carousel-reviews .carousel-item {
+  padding: 0 30px;
 }

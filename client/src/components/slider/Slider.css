@@ -1,0 +1,17 @@
+.slides {
+  height: 100% !important;
+}
+
+.slider .indicators {
+  z-index: 2;
+}
+
+.slider .indicators .indicator-item {
+  height: 8px !important;
+  width: 8px !important;
+  margin: 24px 4px !important;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #fff;
+}
