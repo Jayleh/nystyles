@@ -21,7 +21,7 @@ export default [
   {
     imgSrc: massage,
     imgAlt: 'massage',
-    title: 'Body Therapies',
+    title: 'Body Treatments',
     price: '$200',
     subservices: [
       'Purifying Back',
@@ -32,7 +32,7 @@ export default [
   {
     imgSrc: wax,
     imgAlt: 'wax',
-    title: 'Waxing',
+    title: 'Eyelashes',
     price: '$200',
     subservices: ['Brazilian', 'Bikini', 'Full Legs']
   }

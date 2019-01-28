@@ -1,6 +1,6 @@
 export default [
   {
-    link: '',
+    link: 'https://www.instagram.com/_newyorkstylessalon/',
     icon: 'fa-instagram'
   },
   {
