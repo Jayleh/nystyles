@@ -19,7 +19,7 @@ const ServiceCard = ({ imgSrc, imgAlt, title, price, subservices }) => {
           <h6>{price}</h6>
           <ul>{renderSubservices}</ul>
         </div>
-        <button className="btn">See More</button>
+        <button className="btn waves-effect waves-light">See More</button>
       </div>
     </div>
   );

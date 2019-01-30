@@ -1,4 +1,5 @@
 import M from 'materialize-css';
+import VanillaTilt from 'vanilla-tilt';
 import _ from 'lodash';
 import React, { Component } from 'react';
 import Slider from '../slider/Slider';
@@ -13,6 +14,7 @@ import {
   testimonials
 } from './landingContent';
 import bgParallax from '../../assets/images/bg-parallax.jpg';
+import girl from '../../assets/images/girl.jpg';
 import services from '../serviceCard/services';
 
 import './Landing.css';
@@ -49,6 +51,14 @@ class Landing extends Component {
 
     const imageBoxes = document.querySelectorAll('.materialboxed');
     M.Materialbox.init(imageBoxes);
+
+    const tiltImage = document.querySelector('.tilt-image');
+    VanillaTilt.init(tiltImage, {
+      max: 15,
+      scale: 1.05,
+      glare: true,
+      'max-glare': 0.8
+    });
   }
 
   renderServiceCards = () => {
@@ -131,6 +141,28 @@ class Landing extends Component {
           </div>
           <div className="container">
             <div className="row">{this.renderGalleryImages()}</div>
+          </div>
+        </section>
+        <section className="container appointment">
+          <div className="row">
+            <div className="col s12 m6 center">
+              <div className="tilt-image" data-tilt>
+                <img src={girl} alt="girl" />
+              </div>
+            </div>
+            <div className="col s12 m6">
+              <Breaker topic="Spa Center" subtopic="Appointment" />
+              <div className="center">
+                <h4>Want to make a booking or have a question?</h4>
+                <a
+                  href="tel:+17142881300"
+                  className="btn btn-large waves-effect waves-light"
+                >
+                  <i className="material-icons left">phone</i>
+                  Call Store
+                </a>
+              </div>
+            </div>
           </div>
         </section>
         <section className="reviews">

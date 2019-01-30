@@ -1,12 +1,28 @@
 .parallax-box {
   /* position: relative; */
   height: 50vh;
-  background-image: url('./images/pexels-photo-509922.jpeg');
+  /* background-image: url('./images/pexels-photo-509922.jpeg'); */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   /* transform: translateY(-64px); */
+}
+
+.gallery img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.tilt-image {
+  width: 70%;
+  display: inline-block;
+}
+
+.tilt-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px;
 }
 
 .reviews {
@@ -21,9 +37,4 @@
   /* min-width: unset !important;
   width: 100% !important; */
   height: auto;
-}
-
-.gallery img {
-  width: 150px;
-  margin-bottom: 10px;
 }
