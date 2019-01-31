@@ -15,6 +15,8 @@ const SimpleMap = ({ lat, lng }) => {
     }
   };
 
+  console.log(process.env.GOOGLE_MAPS_KEY);
+
   return (
     <GoogleMapReact
       bootstrapURLKeys={{ key: aquireGoogleMapsKey() }}
