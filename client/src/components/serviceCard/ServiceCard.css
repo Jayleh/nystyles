@@ -18,3 +18,28 @@
   width: 240px;
   height: 240px;
 }
+
+.content-bottom h5 {
+  font-family: 'Playfair Display';
+}
+
+.content-bottom h6 {
+  font-family: 'Arizonia';
+  font-size: 24px;
+  color: #fcbaf8;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 992px) {
+  .image-top img {
+    border: 10px solid #ffffff;
+    width: 150px;
+    height: 150px;
+  }
+
+  .content-bottom h5 {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+}

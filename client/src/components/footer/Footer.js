@@ -63,11 +63,11 @@ class Footer extends Component {
           </div>
         </div>
         <div className="footer-copyright">
-          <div className="container">
+          <div className="container center">
             © 2019 New York Styles Salon
-            <a className="grey-text text-lighten-4 right" href="#!">
+            {/* <a className="grey-text text-lighten-4 right" href="#!">
               More Links
-            </a>
+            </a> */}
           </div>
         </div>
       </footer>

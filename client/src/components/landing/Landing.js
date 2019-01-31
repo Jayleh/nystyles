@@ -5,14 +5,10 @@ import React, { Component } from 'react';
 import Slider from '../slider/Slider';
 import Carousel from '../carousel/Carousel';
 import ServiceCard from '../serviceCard/ServiceCard';
-import Pricing from '../pricing/Pricing';
+import PricingAccordian from '../pricingAccordian/PricingAccordian';
 import Breaker from '../breaker/Breaker';
-import {
-  heroImages,
-  servicesImages,
-  galleryImages,
-  testimonials
-} from './landingContent';
+import SimpleMap from '../simpleMap/SimpleMap';
+import { heroImages, galleryImages, testimonials } from './landingContent';
 import bgParallax from '../../assets/images/bg-parallax.jpg';
 import girl from '../../assets/images/girl.jpg';
 import services from '../serviceCard/services';
@@ -79,7 +75,7 @@ class Landing extends Component {
   renderGalleryImages = () => {
     return _.map(galleryImages, ({ imgSrc, imgAlt }) => {
       return (
-        <div key={imgAlt} className="col s6 m3 d-flex justify-content-center">
+        <div key={imgAlt} className="col s6 l3 d-flex justify-content-center">
           <img className="materialboxed" src={imgSrc} alt={imgAlt} />
         </div>
       );
@@ -94,11 +90,6 @@ class Landing extends Component {
             <Slider content={heroImages} />
           </div>
         </section>
-        {/* <section className="carousel-hero">
-          <div className="row">
-            <Carousel content={heroImages} />
-          </div>
-        </section> */}
         <section className="container introduction">
           <div className="row">
             <div className="col s12">
@@ -110,7 +101,7 @@ class Landing extends Component {
           </div>
           <div className="row">
             <div className="col s12 center">
-              <h4>You will look amazing!</h4>
+              <h4 className="playfair-text">You will look amazing!</h4>
               <h5>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -118,18 +109,18 @@ class Landing extends Component {
             </div>
           </div>
         </section>
-        {/* <section className="container carousel-services">
-          <div className="row">
-            <Carousel content={servicesImages} />
-          </div>
-        </section> */}
         <section className="container">
           <div className="row">{this.renderServiceCards()}</div>
         </section>
         <section className="container pricing">
           <div className="row">
             <div className="col s12">
-              <Pricing />
+              <Breaker topic="Best Deals" subtopic="Our Pricing" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s12">
+              <PricingAccordian />
             </div>
           </div>
         </section>
@@ -139,9 +130,7 @@ class Landing extends Component {
               <Breaker topic="Spa Center" subtopic="Style Gallery" />
             </div>
           </div>
-          <div className="container">
-            <div className="row">{this.renderGalleryImages()}</div>
-          </div>
+          <div className="row">{this.renderGalleryImages()}</div>
         </section>
         <section className="container appointment">
           <div className="row">
@@ -156,7 +145,7 @@ class Landing extends Component {
                 <h4>Want to make a booking or have a question?</h4>
                 <a
                   href="tel:+17142881300"
-                  className="btn btn-large waves-effect waves-light"
+                  className="btn waves-effect waves-light"
                 >
                   <i className="material-icons left">phone</i>
                   Call Store
@@ -175,6 +164,15 @@ class Landing extends Component {
                 <img src={bgParallax} alt="bgParallax" />
               </div>
             </article>
+          </div>
+        </section>
+        <section className="container map">
+          <div className="row">
+            <div className="col s12">
+              <div className="map-wrapper">
+                <SimpleMap lat={33.788128} lng={-117.837379} />
+              </div>
+            </div>
           </div>
         </section>
       </main>

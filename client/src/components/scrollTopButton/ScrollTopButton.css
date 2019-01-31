@@ -1,0 +1,7 @@
+.scroll-top-button {
+  display: none;
+}
+
+.scroll-top-button button {
+  background-color: rgba(252, 186, 248, 0.65) !important;
+}

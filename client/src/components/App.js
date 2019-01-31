@@ -5,6 +5,7 @@ import Header from './header/Header';
 import Landing from './landing/Landing';
 import Prices from './prices/Prices';
 import Footer from './footer/Footer';
+import ScrollTopButton from './scrollTopButton/ScrollTopButton';
 
 import './App.css';
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/prices" exact component={Prices} />
         </Switch>
         <Footer />
+        <ScrollTopButton />
       </React.Fragment>
     </BrowserRouter>
   );

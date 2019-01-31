@@ -39,7 +39,7 @@ const Carousel = ({ content }) => {
             href="#one!"
           >
             <div className="review-icon">"</div>
-            <div className="center">{review}</div>
+            <p className="center">{review}</p>
             <div>{name}</div>
             <div>{location}</div>
           </div>

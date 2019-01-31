@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro|Arizonia');
+
+body {
+  font-family: 'Playfair Display';
+  /* font-family: 'Source Sans Pro'; */
+  font-size: 16px;
+}
+
+.playfair-text {
+  font-family: 'Playfair Display';
+}
+
+.arizonia-text {
+  font-family: 'Arizonia';
+}
+
 .d-flex {
   display: flex !important;
 }

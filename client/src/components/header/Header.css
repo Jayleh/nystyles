@@ -13,6 +13,7 @@
   /* background-color: #ee6e73; */
   background: linear-gradient(to right, #aaaaff, #fcbaf8);
   padding: 10px 0;
+  font-size: 14px;
 }
 
 .widget-text div {
@@ -40,6 +41,11 @@
 }
 
 .brand-logo,
+.header-link a {
+  font-family: 'Playfair Display';
+}
+
+.brand-logo,
 .header-link a,
 .sidenav-trigger {
   color: black !important;
@@ -62,6 +68,29 @@
 
 @media (min-width: 576px) {
   .widget-text div {
+    justify-content: center;
+  }
+
+  .widget-social div {
+    justify-content: center;
+  }
+
+  .widget-social div:first-child {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .sidenav-trigger {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .widget-text div {
     justify-content: start;
   }
 
@@ -71,11 +100,5 @@
 
   .widget-social div:first-child {
     text-align: right;
-  }
-}
-
-@media only screen and (min-width: 993px) {
-  .sidenav-trigger {
-    display: none;
   }
 }

@@ -2,6 +2,7 @@ import M from 'materialize-css';
 import _ from 'lodash';
 import React, { Component } from 'react';
 
+import './PricingAccordian.css';
 import pricingInfo from './pricingInfo';
 
 class Pricing extends Component {
@@ -15,7 +16,7 @@ class Pricing extends Component {
       return (
         <li key={subservice} className="d-flex justify-content-between">
           <div>{subservice}</div>
-          <div>{price}</div>
+          <div className="right-align">{price}</div>
         </li>
       );
     });

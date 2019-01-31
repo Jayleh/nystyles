@@ -2,6 +2,7 @@ import M from 'materialize-css';
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { scrollTopInstant } from '../scrollTopButton/scrollTop';
 import headerLinks from './headerLinks';
 import socialLinks from '../links/socialLinks';
 import './Header.css';
@@ -46,7 +47,9 @@ class Header extends Component {
     return _.map(headerLinks, ({ link, label }) => {
       return (
         <li key={label} className="header-link">
-          <Link to={link}>{label}</Link>
+          <Link to={link} onClick={scrollTopInstant}>
+            {label}
+          </Link>
         </li>
       );
     });
@@ -60,7 +63,7 @@ class Header extends Component {
             <div className="row mb0">
               <div className="col s12 widget-container">
                 <div className="row mb0">
-                  <div className="col s12 m6">
+                  <div className="col s12 l6">
                     <div className="widget-text">
                       <div className="valign-wrapper white-text">
                         <i className="material-icons">phone</i>
@@ -74,7 +77,7 @@ class Header extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col s12 m6">
+                  <div className="col s12 l6">
                     <div className="widget-social white-text">
                       <div>Open Hours: 10am-7pm Mon-Sat 10am-5pm Sun</div>
                       <div className="social-links-top-bar">
@@ -92,7 +95,7 @@ class Header extends Component {
             <div className="container">
               <div className="row">
                 <div className="col s12">
-                  <Link to="/" className="brand-logo">
+                  <Link to="/" className="brand-logo playfair-text">
                     NYSS
                   </Link>
                   <button data-target="mobile-nav" className="sidenav-trigger">

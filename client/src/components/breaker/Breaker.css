@@ -6,3 +6,16 @@
   width: 150px;
   height: 20px;
 }
+
+.heading h4,
+.heading h5 {
+  font-family: 'Playfair Display';
+}
+
+.heading h4 {
+  margin-top: 0;
+}
+
+.heading h5 {
+  font-size: 18px;
+}
