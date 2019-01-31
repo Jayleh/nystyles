@@ -2,3 +2,7 @@
   padding: 10px 0;
   border-bottom: 1px dashed #ddd;
 }
+
+.subservice div:nth-child(2) {
+  color: #aaaaff;
+}

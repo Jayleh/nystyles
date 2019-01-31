@@ -6,7 +6,7 @@ import './Prices.css';
 
 const Prices = () => {
   return (
-    <main>
+    <main className="main">
       <Banner title="CHECK OUR PRICES" />
       <div className="container">
         <div className="row">

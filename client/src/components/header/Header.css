@@ -1,12 +1,16 @@
 .header {
   position: relative;
-  z-index: 998 !important;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   /* width: 100%; */
+}
+
+.nav,
+.top-bar {
+  z-index: 998 !important;
 }
 
 .top-bar {

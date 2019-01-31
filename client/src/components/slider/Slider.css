@@ -19,3 +19,21 @@
 .slider .indicators .indicator-item.active {
   background-color: #fff;
 }
+
+@media (min-width: 768px) {
+  .slider {
+    height: 470px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider {
+    height: 490px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider {
+    height: 665px !important;
+  }
+}

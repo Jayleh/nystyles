@@ -14,6 +14,10 @@ export const heroImages = {
   type: 'hero',
   content: [
     {
+      imgSrc: acrylic,
+      imgAlt: 'acrylic'
+    },
+    {
       imgSrc: chair,
       imgAlt: 'chair'
     },
@@ -28,10 +32,6 @@ export const heroImages = {
     {
       imgSrc: wax,
       imgAlt: 'wax'
-    },
-    {
-      imgSrc: acrylic,
-      imgAlt: 'acrylic'
     }
   ]
 };

@@ -119,7 +119,7 @@ class Landing extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col s12">
+            <div className="col s12 d-flex justify-content-center">
               <PricingAccordian />
             </div>
           </div>
@@ -145,7 +145,7 @@ class Landing extends Component {
                 <h4>Want to make a booking or have a question?</h4>
                 <a
                   href="tel:+17142881300"
-                  className="btn waves-effect waves-light"
+                  className="btn btn-large waves-effect waves-light call-store-button"
                 >
                   <i className="material-icons left">phone</i>
                   Call Store
@@ -168,7 +168,7 @@ class Landing extends Component {
         </section>
         <section className="container map">
           <div className="row">
-            <div className="col s12">
+            <div className="col s12 d-flex justify-content-center">
               <div className="map-wrapper">
                 <SimpleMap lat={33.788128} lng={-117.837379} />
               </div>

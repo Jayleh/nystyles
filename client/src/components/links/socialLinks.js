@@ -10,6 +10,5 @@ export default [
   {
     link: 'https://www.facebook.com/NewYorkStylesSalon/',
     icon: 'fa-facebook-f'
-  },
-  { link: '', icon: 'fa-twitter' }
+  }
 ];

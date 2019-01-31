@@ -1,3 +1,8 @@
+.collapsible {
+  width: 100%;
+  max-width: 700px;
+}
+
 .collapsible-body li {
   padding: 10px 0;
   border-bottom: 1px dashed #ddd;

@@ -3,16 +3,30 @@
   font-size: 14px;
 }
 
+.info-footer {
+  text-align: center;
+}
+
 .social-links-footer {
   display: flex;
   justify-content: center;
 }
+
 .social-links-footer a {
   font-size: 26px;
   padding: 0 10px 0 10px;
 }
 
 @media (min-width: 992px) {
+  .page-footer .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .info-footer {
+    text-align: left;
+  }
+
   .social-links-footer {
     display: unset;
   }

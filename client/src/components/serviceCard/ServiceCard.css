@@ -31,6 +31,10 @@
 }
 
 @media (min-width: 992px) {
+  .pricing-wrap {
+    border-radius: 100px 100px 10px 10px;
+  }
+
   .image-top img {
     border: 10px solid #ffffff;
     width: 150px;
@@ -41,5 +45,17 @@
     display: flex;
     align-items: center;
     height: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pricing-wrap {
+    border-radius: 125px 125px 10px 10px;
+  }
+
+  .image-top img {
+    border: 10px solid #ffffff;
+    width: 250px;
+    height: 250px;
   }
 }

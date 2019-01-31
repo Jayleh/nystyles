@@ -38,7 +38,7 @@ class Footer extends Component {
       <footer className="page-footer">
         <div className="container">
           <div className="row">
-            <div className="col s12 l6 center">
+            <div className="col s12 l6 info-footer">
               <h5 className="white-text">New York Styles Salon</h5>
               <p>
                 Open Hours: 10am-7pm Mon-Sat
