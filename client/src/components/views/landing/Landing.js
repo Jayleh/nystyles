@@ -1,61 +1,51 @@
 import M from 'materialize-css';
 import VanillaTilt from 'vanilla-tilt';
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { isMobile } from 'react-device-detect';
+
 import Slider from '../../slider/Slider';
 import Carousel from '../../carousel/Carousel';
 import ServiceCard from '../../serviceCard/ServiceCard';
 import PricingAccordian from '../../pricingAccordian/PricingAccordian';
 import Breaker from '../../breaker/Breaker';
 import SimpleMap from '../../simpleMap/SimpleMap';
+
 import { heroImages, galleryImages, testimonials } from './landingContent';
+import services from '../../serviceCard/services';
 import bgParallax from '../../../assets/images/bg-parallax.jpg';
 import girl from '../../../assets/images/girl.jpg';
-import services from '../../serviceCard/services';
 
 import './Landing.css';
 
 class Landing extends Component {
+  constructor() {
+    super();
+
+    this.collapsible = createRef();
+    this.materialboxed = createRef();
+    this.tiltImage = createRef();
+    this.parallax = createRef();
+    this.carouselReviews = createRef();
+  }
+
   componentDidMount() {
-    const slider = document.querySelector('.slider');
-    M.Slider.init(slider, {
-      indicators: true,
-      duration: 2000,
-      interval: 7000
-    });
-
-    const carouselHero = document.querySelector(
-      '.carousel-hero .carousel-slider'
-    );
-    M.Carousel.init(carouselHero, { fullWidth: true, indicators: true });
-
-    const carouselServices = document.querySelector(
-      '.carousel-services .carousel-slider'
-    );
-    M.Carousel.init(carouselServices, { fullWidth: true });
-
-    const carouselReviews = document.querySelector(
-      '.carousel-reviews .carousel-slider'
-    );
-    M.Carousel.init(carouselReviews, { fullWidth: true, indicators: true });
-
-    const parallax = document.querySelectorAll('.parallax');
-    M.Parallax.init(parallax);
-
-    const collapsible = document.querySelector('.collapsible');
-    M.Collapsible.init(collapsible);
+    M.Parallax.init(this.parallax.current);
 
     const imageBoxes = document.querySelectorAll('.materialboxed');
     M.Materialbox.init(imageBoxes);
 
-    const tiltImage = document.querySelector('.tilt-image');
-    VanillaTilt.init(tiltImage, {
+    VanillaTilt.init(this.tiltImage.current, {
       max: 15,
       scale: 1.05,
       glare: true,
       'max-glare': 0.8
     });
+
+    const carouselReviews = document.querySelector(
+      '.carousel-reviews .carousel-slider'
+    );
+    M.Carousel.init(carouselReviews, { fullWidth: true, indicators: true });
   }
 
   renderServiceCards = () => {
@@ -86,14 +76,14 @@ class Landing extends Component {
   renderTiltImage = () => {
     if (isMobile) {
       return (
-        <div className="tilt-image" data-tilt={false}>
+        <div className="tilt-image">
           <img src={girl} alt="girl" />
         </div>
       );
     }
 
     return (
-      <div className="tilt-image" data-tilt>
+      <div ref={this.tiltImage} className="tilt-image">
         <img src={girl} alt="girl" />
       </div>
     );
@@ -179,7 +169,7 @@ class Landing extends Component {
               <Carousel content={testimonials} />
             </article>
             <article className="parallax-container">
-              <div className="parallax">
+              <div ref={this.parallax} className="parallax">
                 <img src={bgParallax} alt="bgParallax" />
               </div>
             </article>
@@ -189,7 +179,7 @@ class Landing extends Component {
           <div className="row">
             <div className="col s12 d-flex justify-content-center">
               <div className="map-wrapper">
-                {/* <SimpleMap lat={33.788128} lng={-117.837379} /> */}
+                <SimpleMap lat={33.788128} lng={-117.837379} />
               </div>
             </div>
           </div>

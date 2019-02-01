@@ -1,21 +1,43 @@
+import M from 'materialize-css';
 import _ from 'lodash';
-import React from 'react';
+import React, { Component, createRef } from 'react';
 
 import './Slider.css';
 
-const Slider = ({ content }) => {
-  const renderContent = _.map(content.content, ({ imgSrc, imgAlt }) => {
+class Slider extends Component {
+  constructor() {
+    super();
+
+    this.slider = createRef();
+  }
+
+  componentDidMount() {
+    M.Slider.init(this.slider.current, {
+      indicators: true,
+      duration: 2000,
+      interval: 7000
+    });
+  }
+
+  renderContent = content => {
+    return _.map(content.content, ({ imgSrc, imgAlt }) => {
+      return (
+        <li key={imgAlt}>
+          <img src={imgSrc} alt={imgAlt} />
+        </li>
+      );
+    });
+  };
+
+  render() {
+    const { content } = this.props;
+
     return (
-      <li key={imgAlt}>
-        <img src={imgSrc} alt={imgAlt} />
-      </li>
+      <div ref={this.slider} className="slider">
+        <ul className="slides">{this.renderContent(content)}</ul>
+      </div>
     );
-  });
-  return (
-    <div className="slider">
-      <ul className="slides">{renderContent}</ul>
-    </div>
-  );
-};
+  }
+}
 
 export default Slider;

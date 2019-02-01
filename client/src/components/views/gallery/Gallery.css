@@ -1,6 +1,6 @@
-.grid {
-  /* background: #ddd; */
-}
+/* .grid {
+  background: #fff;
+} */
 
 /* clear fix */
 .grid:after {
@@ -13,7 +13,7 @@
 
 .grid-sizer,
 .grid-item {
-  width: 33.333%;
+  width: 50%;
 }
 
 .grid-item {
@@ -24,4 +24,18 @@
 .grid-item img {
   display: block;
   max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .grid-sizer,
+  .grid-item {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-sizer,
+  .grid-item {
+    width: 16.666%;
+  }
 }

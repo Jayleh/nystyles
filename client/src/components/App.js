@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './views/header/Header';
 import Landing from './views/landing/Landing';
+import Services from './views/services/Services';
 import Gallery from './views/gallery/Gallery';
 import Prices from './views/prices/Prices';
 import Footer from './views/footer/Footer';
@@ -17,6 +18,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route path="/" exact component={Landing} />
+          <Route path="/services" exact component={Services} />
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/prices" exact component={Prices} />
         </Switch>

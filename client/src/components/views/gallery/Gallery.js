@@ -1,13 +1,15 @@
+import _ from 'lodash';
 import Isotope from 'isotope-layout';
 import imagesLoaded from 'imagesloaded';
+import faker from 'faker';
 import React, { Component, createRef } from 'react';
 import Banner from '../../banner/Banner';
 
 import './Gallery.css';
 
 class Gallery extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.gridRef = createRef();
     this.goodButtonRef = createRef();
@@ -31,8 +33,23 @@ class Gallery extends Component {
     });
   }
 
+  renderContent = () => {
+    const imageUrls = [];
+
+    for (let i = 0; i < 21; i++) {
+      imageUrls.push({ id: i, imageUrl: faker.image.image() });
+    }
+
+    return _.map(imageUrls, ({ id, imageUrl }) => {
+      return (
+        <div key={id} className="grid-item">
+          <img src={imageUrl} alt="" />
+        </div>
+      );
+    });
+  };
+
   render() {
-    console.log(process.env.REACT_APP_UNSPLASH_CLIENT_ID);
     return (
       <main className="main">
         <Banner title="GALLERY" />
@@ -40,7 +57,7 @@ class Gallery extends Component {
           <div className="row">
             <button
               ref={this.goodButtonRef}
-              className="btn btn-large waves-effect waves-light good-button"
+              className="btn btn-large waves-effect waves-light"
             >
               Good
             </button>
@@ -50,60 +67,7 @@ class Gallery extends Component {
           <div className="row">
             <div ref={this.gridRef} className="grid">
               <div className="grid-sizer" />
-              <div className="grid-item good">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item good">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item good">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="grid-item">
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg"
-                  alt=""
-                />
-              </div>
+              {this.renderContent()}
             </div>
           </div>
         </div>

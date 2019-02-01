@@ -1,14 +1,19 @@
 import M from 'materialize-css';
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 import './PricingAccordian.css';
 import pricingInfo from './pricingInfo';
 
 class Pricing extends Component {
+  constructor() {
+    super();
+
+    this.collapsible = createRef();
+  }
+
   componentDidMount() {
-    const collapsible = document.querySelector('.collapsible');
-    M.Collapsible.init(collapsible);
+    M.Collapsible.init(this.collapsible.current);
   }
 
   renderSubServices(info) {
@@ -36,7 +41,11 @@ class Pricing extends Component {
   }
 
   render() {
-    return <ul className="collapsible">{this.renderContent()}</ul>;
+    return (
+      <ul ref={this.collapsible} className="collapsible">
+        {this.renderContent()}
+      </ul>
+    );
   }
 }
 
