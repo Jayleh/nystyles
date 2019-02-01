@@ -1,5 +1,5 @@
 import React from 'react';
-import Banner from '../banner/Banner';
+import Banner from '../../banner/Banner';
 import PricesTable from './PricesTable';
 
 import './Prices.css';

@@ -1,14 +1,14 @@
-import chair from '../../assets/images/chair.jpeg';
-import jar from '../../assets/images/jar.jpeg';
-import nails from '../../assets/images/nails.jpeg';
-import wax from '../../assets/images/wax.jpeg';
-import acrylic from '../../assets/images/acrylic.jpeg';
+import chair from '../../../assets/images/chair.jpeg';
+import jar from '../../../assets/images/jar.jpeg';
+import nails from '../../../assets/images/nails.jpeg';
+import wax from '../../../assets/images/wax.jpeg';
+import acrylic from '../../../assets/images/acrylic.jpeg';
 
 // square images
-import blonde from '../serviceCard/images/blonde.jpg';
-import massage from '../serviceCard/images/massage.jpg';
-import nails1 from '../serviceCard/images/nails.jpg';
-import wax1 from '../serviceCard/images/wax.jpeg';
+import blonde from '../../serviceCard/images/blonde.jpg';
+import massage from '../../serviceCard/images/massage.jpg';
+import nails1 from '../../serviceCard/images/nails.jpg';
+import wax1 from '../../serviceCard/images/wax.jpeg';
 
 export const heroImages = {
   type: 'hero',

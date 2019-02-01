@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import openHours from './openHours';
-import socialLinks from '../links/socialLinks';
+import socialLinks from '../../links/socialLinks';
 import './Footer.css';
 
 class Footer extends Component {

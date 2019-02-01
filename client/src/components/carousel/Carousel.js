@@ -36,12 +36,15 @@ const Carousel = ({ content }) => {
           <div
             key={name}
             className="carousel-item transparent valign-wrapper flex-column justify-content-center"
-            href="#one!"
           >
-            <div className="review-icon">"</div>
-            <p className="center">{review}</p>
-            <div>{name}</div>
-            <div>{location}</div>
+            <div className="carousel-item-content center">
+              <div className="review-icon">"</div>
+              <br />
+              <div>{review}</div>
+              <br />
+              <div>{name}</div>
+              <div>{location}</div>
+            </div>
           </div>
         );
       });

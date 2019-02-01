@@ -2,9 +2,9 @@ import M from 'materialize-css';
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { scrollTopInstant } from '../scrollTopButton/scrollTop';
+import { scrollTopInstant } from '../../scrollTopButton/scrollTop';
 import headerLinks from './headerLinks';
-import socialLinks from '../links/socialLinks';
+import socialLinks from '../../links/socialLinks';
 import './Header.css';
 
 class Header extends Component {

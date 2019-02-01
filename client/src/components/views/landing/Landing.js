@@ -2,16 +2,17 @@ import M from 'materialize-css';
 import VanillaTilt from 'vanilla-tilt';
 import _ from 'lodash';
 import React, { Component } from 'react';
-import Slider from '../slider/Slider';
-import Carousel from '../carousel/Carousel';
-import ServiceCard from '../serviceCard/ServiceCard';
-import PricingAccordian from '../pricingAccordian/PricingAccordian';
-import Breaker from '../breaker/Breaker';
-import SimpleMap from '../simpleMap/SimpleMap';
+import { isMobile } from 'react-device-detect';
+import Slider from '../../slider/Slider';
+import Carousel from '../../carousel/Carousel';
+import ServiceCard from '../../serviceCard/ServiceCard';
+import PricingAccordian from '../../pricingAccordian/PricingAccordian';
+import Breaker from '../../breaker/Breaker';
+import SimpleMap from '../../simpleMap/SimpleMap';
 import { heroImages, galleryImages, testimonials } from './landingContent';
-import bgParallax from '../../assets/images/bg-parallax.jpg';
-import girl from '../../assets/images/girl.jpg';
-import services from '../serviceCard/services';
+import bgParallax from '../../../assets/images/bg-parallax.jpg';
+import girl from '../../../assets/images/girl.jpg';
+import services from '../../serviceCard/services';
 
 import './Landing.css';
 
@@ -75,11 +76,27 @@ class Landing extends Component {
   renderGalleryImages = () => {
     return _.map(galleryImages, ({ imgSrc, imgAlt }) => {
       return (
-        <div key={imgAlt} className="col s6 l3 d-flex justify-content-center">
-          <img className="materialboxed" src={imgSrc} alt={imgAlt} />
+        <div key={imgAlt} className="col s6 l3">
+          <img src={imgSrc} alt={imgAlt} />
         </div>
       );
     });
+  };
+
+  renderTiltImage = () => {
+    if (isMobile) {
+      return (
+        <div className="tilt-image" data-tilt={false}>
+          <img src={girl} alt="girl" />
+        </div>
+      );
+    }
+
+    return (
+      <div className="tilt-image" data-tilt>
+        <img src={girl} alt="girl" />
+      </div>
+    );
   };
 
   render() {
@@ -100,12 +117,14 @@ class Landing extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col s12 center">
-              <h4 className="playfair-text">You will look amazing!</h4>
-              <h5>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </h5>
+            <div className="col s12 d-flex justify-content-center">
+              <div className="introduction-hook center">
+                <h4 className="playfair-text">You will look amazing!</h4>
+                <h5>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </h5>
+              </div>
             </div>
           </div>
         </section>
@@ -130,14 +149,14 @@ class Landing extends Component {
               <Breaker topic="Spa Center" subtopic="Style Gallery" />
             </div>
           </div>
-          <div className="row">{this.renderGalleryImages()}</div>
+          <div className="row d-flex justify-content-center">
+            <div className="gallery-wrapper">{this.renderGalleryImages()}</div>
+          </div>
         </section>
         <section className="container appointment">
           <div className="row">
-            <div className="col s12 m6 center">
-              <div className="tilt-image" data-tilt>
-                <img src={girl} alt="girl" />
-              </div>
+            <div className="col s12 m6 d-flex justify-content-center">
+              {this.renderTiltImage()}
             </div>
             <div className="col s12 m6">
               <Breaker topic="Spa Center" subtopic="Appointment" />
@@ -156,7 +175,7 @@ class Landing extends Component {
         </section>
         <section className="reviews">
           <div className="row">
-            <article className="carousel-reviews">
+            <article className="carousel-reviews d-flex justify-content-center">
               <Carousel content={testimonials} />
             </article>
             <article className="parallax-container">
@@ -170,7 +189,7 @@ class Landing extends Component {
           <div className="row">
             <div className="col s12 d-flex justify-content-center">
               <div className="map-wrapper">
-                <SimpleMap lat={33.788128} lng={-117.837379} />
+                {/* <SimpleMap lat={33.788128} lng={-117.837379} /> */}
               </div>
             </div>
           </div>

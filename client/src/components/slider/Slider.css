@@ -1,5 +1,5 @@
 .slider {
-  height: 330px !important;
+  height: 50vh !important;
 }
 
 .slides {
@@ -20,20 +20,20 @@
   background-color: #fff;
 }
 
+@media (min-width: 576px) {
+  .slider {
+    height: 60vh !important;
+  }
+}
+
 @media (min-width: 768px) {
   .slider {
-    height: 470px !important;
+    height: 50vh !important;
   }
 }
 
 @media (min-width: 992px) {
   .slider {
-    height: 490px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .slider {
-    height: 665px !important;
+    height: 55vh !important;
   }
 }

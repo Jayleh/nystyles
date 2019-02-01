@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import pricingInfo from '../pricingAccordian/pricingInfo';
+import pricingInfo from '../../pricingAccordian/pricingInfo';
 
 const PricesTable = ({ header }) => {
   const renderSubServices = info => {

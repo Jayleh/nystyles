@@ -33,10 +33,7 @@
 
 .carousel-reviews .carousel.carousel-slider {
   height: 400px !important;
-}
-
-.carousel-reviews .carousel-item {
-  padding: 0 10%;
+  max-width: 1000px;
 }
 
 .carousel-reviews .carousel-item .review-icon {
@@ -48,13 +45,13 @@
 }
 
 @media (min-width: 576px) {
-  .carousel-reviews .carousel-item {
-    padding: 0 25%;
+}
+
+@media (min-width: 992px) {
+  .carousel-item-content {
+    max-width: 400px;
   }
 }
 
 @media (min-width: 1200px) {
-  .carousel-reviews .carousel-item {
-    padding: 0 38%;
-  }
 }
