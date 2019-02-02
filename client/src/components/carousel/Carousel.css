@@ -36,6 +36,10 @@
   max-width: 1000px;
 }
 
+.carousel-item-content {
+  max-width: 325px;
+}
+
 .carousel-reviews .carousel-item .review-icon {
   font-family: 'Arizonia';
   font-size: 100px;

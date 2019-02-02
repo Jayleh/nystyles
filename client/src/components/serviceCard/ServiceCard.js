@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { scrollTopInstant } from '../scrollTopButton/scrollTop';
 
 import './ServiceCard.css';
 
@@ -19,7 +21,13 @@ const ServiceCard = ({ imgSrc, imgAlt, title, price, subservices }) => {
           <h6>{price}</h6>
           <ul>{renderSubservices}</ul>
         </div>
-        <button className="btn waves-effect waves-light">See More</button>
+        <Link
+          to="/services"
+          className="btn waves-effect waves-light"
+          onClick={scrollTopInstant}
+        >
+          See More
+        </Link>
       </div>
     </div>
   );

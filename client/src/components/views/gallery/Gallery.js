@@ -26,10 +26,12 @@ class Gallery extends Component {
           columnWidth: '.grid-sizer'
         }
       });
+    });
 
-      this.goodButtonRef.current.addEventListener('click', () => {
-        isotope.arrange({ filter: '.good' });
-      });
+    const goodButton = this.goodButtonRef;
+
+    goodButton.current.addEventListener('click', () => {
+      isotope.arrange({ filter: '.good' });
     });
   }
 

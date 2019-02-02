@@ -1,13 +1,13 @@
-.collapsible {
+.collapsible-pricing {
   width: 100%;
   max-width: 700px;
 }
 
-.collapsible-body li {
+.collapsible-pricing .collapsible-body li {
   padding: 10px 0;
   border-bottom: 1px dashed #ddd;
 }
 
-.collapsible-body li div:nth-child(2) {
+.collapsible-pricing .collapsible-body li div:nth-child(2) {
   color: #aaaaff;
 }

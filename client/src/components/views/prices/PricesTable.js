@@ -18,15 +18,18 @@ const PricesTable = ({ header }) => {
   };
 
   const renderPricingTable = header => {
-    const serviceMatch = pricingInfo.filter(info => info.service === header);
-    const { title, info } = serviceMatch[0];
+    const serviceMatch = pricingInfo.find(info => info.service === header);
 
-    return (
-      <div className="price-table">
-        <h4>{title}</h4>
-        <ul>{renderSubServices(info)}</ul>
-      </div>
-    );
+    if (serviceMatch) {
+      const { title, info } = serviceMatch;
+
+      return (
+        <div className="price-table">
+          <h4>{title}</h4>
+          <ul>{renderSubServices(info)}</ul>
+        </div>
+      );
+    }
   };
 
   return renderPricingTable(header);

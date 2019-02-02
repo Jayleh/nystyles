@@ -42,7 +42,7 @@ class Pricing extends Component {
 
   render() {
     return (
-      <ul ref={this.collapsible} className="collapsible">
+      <ul ref={this.collapsible} className="collapsible collapsible-pricing">
         {this.renderContent()}
       </ul>
     );
