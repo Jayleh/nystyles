@@ -46,8 +46,19 @@ class Footer extends Component {
                 10am-5pm Sun
               </p>
               <ul>
-                <li className="grey-text text-lighten-4">1519 E Chapman Ave</li>
-                <li className="grey-text text-lighten-4">Orange, CA 92866</li>
+                <li className="grey-text text-lighten-4">
+                  <a
+                    href="https://goo.gl/maps/SrR7Ju3YG8P2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="white-text"
+                  >
+                    1519 E Chapman Ave
+                    <br />
+                    Orange, CA 92866
+                  </a>
+                </li>
+                <br />
                 <li className="grey-text text-lighten-4">
                   <a href="tel:+17142881300">
                     <u className="grey-text text-lighten-4">(714) 288-1300</u>

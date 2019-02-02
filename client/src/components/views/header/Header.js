@@ -73,7 +73,14 @@ class Header extends Component {
                       </div>
                       <div className="valign-wrapper white-text">
                         <i className="material-icons">place</i>
-                        1519 E Chapman Ave, Orange, CA 92866
+                        <a
+                          href="https://goo.gl/maps/SrR7Ju3YG8P2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="white-text"
+                        >
+                          1519 E Chapman Ave, Orange, CA 92866
+                        </a>
                       </div>
                     </div>
                   </div>

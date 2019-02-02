@@ -18,7 +18,7 @@
 
 .grid-item {
   float: left;
-  padding: 5px;
+  /* padding: 1px; */
 }
 
 .grid-item img {
@@ -29,13 +29,9 @@
 @media (min-width: 576px) {
   .grid-sizer,
   .grid-item {
-    width: 33.333%;
+    width: 33.33333%;
   }
 }
 
 @media (min-width: 992px) {
-  .grid-sizer,
-  .grid-item {
-    width: 16.666%;
-  }
 }

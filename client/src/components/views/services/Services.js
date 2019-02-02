@@ -9,7 +9,7 @@ class Services extends Component {
   constructor() {
     super();
 
-    this.state = { serviceFocus: 'Main Service' };
+    this.state = { serviceFocus: 'Hair Styling' };
 
     this.collapsible = createRef();
   }
@@ -24,11 +24,10 @@ class Services extends Component {
         <a
           key={service}
           href="#!"
-          className="collection-item d-flex justify-content-between"
+          className="collection-item"
           onClick={() => this.setState({ serviceFocus: service })}
         >
-          <div className="collection-item-service">{service}</div>
-          <div className="collection-item-price">{price}</div>
+          {service}
         </a>
       );
     });
@@ -36,7 +35,7 @@ class Services extends Component {
 
   renderContent() {
     return (
-      <li>
+      <li className="active">
         <div className="collapsible-header">
           <i className="material-icons">whatshot</i>Hot Stuff
         </div>
@@ -55,7 +54,7 @@ class Services extends Component {
         <Banner title="SERVICES" />
         <section className="container">
           <div className="row">
-            <div className="col s12 l4">
+            <div className="col s12 l3">
               <ul
                 ref={this.collapsible}
                 className="collapsible collapsible-services"
@@ -63,7 +62,7 @@ class Services extends Component {
                 {this.renderContent()}
               </ul>
             </div>
-            <div className="col s12 l8">
+            <div className="col s12 l9">
               <ServiceDetail serviceFocus={this.state.serviceFocus} />
             </div>
           </div>

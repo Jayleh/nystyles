@@ -2,22 +2,27 @@ import _ from 'lodash';
 import React from 'react';
 import serviceDetailContent from './serviceDetailContent';
 
+import './ServiceDetail.css';
+
 const ServiceDetail = ({ serviceFocus }) => {
-  const renderSubservicesImages = images => {
+  const renderServiceImages = images => {
     return _.map(images, ({ imgSrc, imgAlt }) => {
-      return <img src={imgSrc} alt={imgAlt} />;
+      return (
+        <div className="col s6 m3">
+          <img src={imgSrc} alt={imgAlt} />
+        </div>
+      );
     });
   };
 
   const renderSubservices = subservices => {
-    return _.map(subservices, ({ subservice, price, description }) => {
+    return _.map(subservices, ({ subservice, price, detail }) => {
       return (
         <li>
-          <div className="d-flex justify-content-between">
-            <h5>{subservice}</h5>
-            <h5>{price}</h5>
+          <div>
+            {subservice} &mdash; {price}
           </div>
-          <p>{description}</p>
+          <div>{detail}</div>
         </li>
       );
     });
@@ -29,15 +34,23 @@ const ServiceDetail = ({ serviceFocus }) => {
     );
 
     if (serviceMatch) {
-      const { service, subservices, images } = serviceMatch;
+      const {
+        service,
+        description,
+        subservices,
+        subDescription,
+        images
+      } = serviceMatch;
 
       return (
         <React.Fragment>
-          <h4>{service}</h4>
-          <ul className="subservices">{renderSubservices(subservices)}</ul>
-          <div className="subservices-gallery">
-            {renderSubservicesImages(images)}
+          <div className="subservice-info">
+            <h4>{service}</h4>
+            <p>{description}</p>
+            <ul className="subservices">{renderSubservices(subservices)}</ul>
+            <p>{subDescription}</p>
           </div>
+          <div className="service-gallery">{renderServiceImages(images)}</div>
         </React.Fragment>
       );
     }
