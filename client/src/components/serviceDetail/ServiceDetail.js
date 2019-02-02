@@ -8,7 +8,7 @@ const ServiceDetail = ({ serviceFocus }) => {
   const renderServiceImages = images => {
     return _.map(images, ({ imgSrc, imgAlt }) => {
       return (
-        <div className="col s6 m3">
+        <div key={Math.random()} className="col s6 m3">
           <img src={imgSrc} alt={imgAlt} />
         </div>
       );
@@ -18,7 +18,7 @@ const ServiceDetail = ({ serviceFocus }) => {
   const renderSubservices = subservices => {
     return _.map(subservices, ({ subservice, price, detail }) => {
       return (
-        <li>
+        <li key={subservice}>
           <div>
             {subservice} &mdash; {price}
           </div>

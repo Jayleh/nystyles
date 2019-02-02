@@ -5,6 +5,8 @@ import Banner from '../../banner/Banner';
 import ServiceDetail from '../../serviceDetail/ServiceDetail';
 import servicesContent from './servicesContent';
 
+import './Services.css';
+
 class Services extends Component {
   constructor() {
     super();
@@ -52,7 +54,7 @@ class Services extends Component {
     return (
       <main className="main">
         <Banner title="SERVICES" />
-        <section className="container">
+        <section className="container services">
           <div className="row">
             <div className="col s12 l3">
               <ul

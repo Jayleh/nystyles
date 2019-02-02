@@ -1,3 +1,19 @@
+.tabs-filter .tab a,
+.tabs-filter .tab a:hover,
+.tabs-filter .tab a.active {
+  color: #aaaaff;
+}
+
+.tabs-filter .tab a:focus,
+.tabs-filter .tab a.active {
+  /* background-color: rgba(170, 170, 255, 0.2) !important; */
+  background-color: transparent !important;
+}
+
+.tabs-filter .indicator {
+  background-color: #aaaaff;
+}
+
 /* .grid {
   background: #fff;
 } */
@@ -23,13 +39,13 @@
 
 .grid-item img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 576px) {
   .grid-sizer,
   .grid-item {
-    width: 33.33333%;
+    width: 33.3333%;
   }
 }
 

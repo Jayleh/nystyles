@@ -32,8 +32,8 @@ class Landing extends Component {
   componentDidMount() {
     M.Parallax.init(this.parallax.current);
 
-    const imageBoxes = document.querySelectorAll('.materialboxed');
-    M.Materialbox.init(imageBoxes);
+    // const imageBoxes = document.querySelectorAll('.materialboxed');
+    // M.Materialbox.init(imageBoxes);
 
     VanillaTilt.init(this.tiltImage.current, {
       max: 15,
@@ -179,7 +179,7 @@ class Landing extends Component {
           <div className="row">
             <div className="col s12 d-flex justify-content-center">
               <div className="map-wrapper">
-                {/* <SimpleMap lat={33.788128} lng={-117.837379} /> */}
+                <SimpleMap lat={33.788128} lng={-117.837379} />
               </div>
             </div>
           </div>

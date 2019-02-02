@@ -1,2 +1,10 @@
-.collapsible-services {
+.collapsible-services .collection a {
+  color: #aaaaff;
+}
+
+@media (min-width: 992px) {
+  /* .services .row {
+    display: flex;
+    align-items: center;
+  } */
 }
