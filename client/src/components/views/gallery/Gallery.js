@@ -5,7 +5,7 @@ import imagesLoaded from 'imagesloaded';
 import faker from 'faker';
 import React, { Component, createRef } from 'react';
 import Banner from '../../banner/Banner';
-import { filterButtons } from './galleryContent';
+// import { filterButtons } from './galleryContent';
 
 import './Gallery.css';
 
@@ -62,23 +62,26 @@ class Gallery extends Component {
 
   renderFilterTabs = () => {
     return (
-      <ul ref={this.tabsRef} class="tabs tabs-filter">
-        <li class="tab col s3">
+      <ul
+        ref={this.tabsRef}
+        className="tabs tabs-filter d-flex justify-content-center"
+      >
+        <li className="tab">
           <a ref={this.showAllTabRef} className="active" href="#all">
             All
           </a>
         </li>
-        <li class="tab col s3">
+        <li className="tab">
           <a ref={this.hairTabRef} href="#hairstyle">
             Hair Styling
           </a>
         </li>
-        <li class="tab col s3">
+        <li className="tab">
           <a ref={this.nailsTabRef} href="#nailcare">
             Nail Care
           </a>
         </li>
-        <li class="tab col s3">
+        <li className="tab">
           <a ref={this.skinTabRef} href="#skincare">
             Skin Care
           </a>
@@ -108,9 +111,7 @@ class Gallery extends Component {
       <main className="main">
         <Banner title="OUR GALLERY" />
         <div className="container">
-          <div className="row">
-            <div class="col s12">{this.renderFilterTabs()}</div>
-          </div>
+          <div className="row">{this.renderFilterTabs()}</div>
         </div>
         <div className="container">
           <div className="row">

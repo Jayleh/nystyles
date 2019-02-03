@@ -35,7 +35,13 @@ body {
 }
 
 .btn {
-  background: linear-gradient(to right, #aaaaff, #fcbaf8);
+  background-image: linear-gradient(
+    to right,
+    #aaaaff 0%,
+    #fcbaf8 51%,
+    #aaaaff 100%
+  );
+  background-size: 200% auto;
   transition: 0.7s all;
 }
 

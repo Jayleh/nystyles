@@ -21,11 +21,7 @@ const ServiceCard = ({ imgSrc, imgAlt, title, price, subservices }) => {
           <h6>{price}</h6>
           <ul>{renderSubservices}</ul>
         </div>
-        <Link
-          to="/services"
-          className="btn waves-effect waves-light"
-          onClick={scrollTopInstant}
-        >
+        <Link to="/services" className="btn" onClick={scrollTopInstant}>
           See More
         </Link>
       </div>

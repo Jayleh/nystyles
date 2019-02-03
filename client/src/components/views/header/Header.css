@@ -37,7 +37,27 @@
 .social-links-top-bar a {
   font-size: 16px;
   padding: 0 10px;
+  /* margin: 0 5px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    #aaaaff 0%,
+    #fcbaf8 51%,
+    #aaaaff 100%
+  );
+  background-size: 200% auto;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s all; */
 }
+
+/* .social-links-top-bar a:hover {
+  background-position: right center;
+} */
 
 .nav {
   /* background-color: rgba(238, 110, 115, 1); */

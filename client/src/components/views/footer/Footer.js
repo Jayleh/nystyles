@@ -21,7 +21,7 @@ class Footer extends Component {
       return (
         <li key={icon}>
           <a
-            className="white-text"
+            className="white-text waves-effect light-effect"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
