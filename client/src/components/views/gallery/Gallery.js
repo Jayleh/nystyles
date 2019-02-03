@@ -15,7 +15,7 @@ class Gallery extends Component {
 
     this.tabsRef = createRef();
     this.gridRef = createRef();
-    this.showAllTabRef = createRef();
+    this.allTabRef = createRef();
     this.hairTabRef = createRef();
     this.nailsTabRef = createRef();
     this.skinTabRef = createRef();
@@ -39,7 +39,7 @@ class Gallery extends Component {
         }
       });
 
-      this.showAllTabRef.current.addEventListener('click', () => {
+      this.allTabRef.current.addEventListener('click', () => {
         isotope.arrange({ filter: '*' });
       });
 
@@ -67,7 +67,7 @@ class Gallery extends Component {
         className="tabs tabs-filter d-flex justify-content-center"
       >
         <li className="tab">
-          <a ref={this.showAllTabRef} className="active" href="#all">
+          <a ref={this.allTabRef} className="active" href="#all">
             All
           </a>
         </li>

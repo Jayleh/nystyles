@@ -1,16 +1,50 @@
 .pricing-wrap {
+  position: relative;
   text-align: center;
   background: #f5f5f9;
   padding: 10px 0 48px 0;
   margin: 0 auto 20px auto;
   border-radius: 125px 125px 10px 10px;
-  transition: background 0.4s linear;
   max-width: 270px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   align-items: center;
-  /* justify-content: space-between; */
+  transition: background 0.4s linear;
+}
+
+.pricing-wrap::before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #aaaaff, #fcbaf8);
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s linear;
+}
+
+.pricing-wrap:hover::before {
+  opacity: 1;
+}
+
+.pricing-wrap:hover .content-bottom h5,
+.pricing-wrap:hover .content-bottom h6,
+.pricing-wrap:hover .content-bottom ul li {
+  color: #fff;
+}
+
+.pricing-wrap:hover a {
+  background: #fff;
+  color: #fcbaf8;
+  font-weight: bold;
+}
+
+.pricing-wrap .image-top,
+.pricing-wrap .content-bottom,
+.pricing-wrap a {
+  position: relative;
 }
 
 .image-top img {
