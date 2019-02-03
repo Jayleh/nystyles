@@ -175,7 +175,7 @@ class Landing extends Component {
             </article>
           </div>
         </section>
-        <section className="container map">
+        <section className="container map-landing">
           <div className="row">
             <div className="col s12 d-flex justify-content-center">
               <div className="map-wrapper">

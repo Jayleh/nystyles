@@ -14,7 +14,27 @@
 
 .social-links-footer a {
   font-size: 26px;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    #aaaaff 0%,
+    #fcbaf8 51%,
+    #aaaaff 100%
+  );
+  background-size: 200% auto;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s all;
+}
+
+.social-links-footer a:hover {
+  background-position: right center;
 }
 
 @media (min-width: 992px) {
@@ -29,5 +49,9 @@
 
   .social-links-footer {
     display: unset;
+  }
+
+  .social-links-footer a {
+    margin: 10px 0;
   }
 }

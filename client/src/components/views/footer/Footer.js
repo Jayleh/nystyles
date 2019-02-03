@@ -21,7 +21,7 @@ class Footer extends Component {
       return (
         <li key={icon}>
           <a
-            className="grey-text text-lighten-3"
+            className="white-text"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,7 +46,7 @@ class Footer extends Component {
                 10am-5pm Sun
               </p>
               <ul>
-                <li className="grey-text text-lighten-4">
+                <li className="white-text">
                   <a
                     href="https://goo.gl/maps/SrR7Ju3YG8P2"
                     target="_blank"
@@ -59,9 +59,9 @@ class Footer extends Component {
                   </a>
                 </li>
                 <br />
-                <li className="grey-text text-lighten-4">
+                <li className="white-text">
                   <a href="tel:+17142881300">
-                    <u className="grey-text text-lighten-4">(714) 288-1300</u>
+                    <u className="white-text">(714) 288-1300</u>
                   </a>
                 </li>
               </ul>
@@ -74,12 +74,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="footer-copyright">
-          <div className="container center">
-            © 2019 New York Styles Salon
-            {/* <a className="grey-text text-lighten-4 right" href="#!">
-              More Links
-            </a> */}
-          </div>
+          <div className="container center">© 2019 New York Styles Salon</div>
         </div>
       </footer>
     );

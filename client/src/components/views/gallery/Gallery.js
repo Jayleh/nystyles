@@ -18,11 +18,16 @@ class Gallery extends Component {
     this.showAllTabRef = createRef();
     this.hairTabRef = createRef();
     this.nailsTabRef = createRef();
+    this.skinTabRef = createRef();
   }
 
   componentDidMount() {
     M.Tabs.init(this.tabsRef.current);
 
+    this.configureGallery();
+  }
+
+  configureGallery = () => {
     const grid = this.gridRef.current;
     let isotope;
 
@@ -43,13 +48,17 @@ class Gallery extends Component {
       });
 
       this.nailsTabRef.current.addEventListener('click', () => {
-        isotope.arrange({ filter: '.hair' });
+        isotope.arrange({ filter: '.nails' });
+      });
+
+      this.skinTabRef.current.addEventListener('click', () => {
+        isotope.arrange({ filter: '.skin' });
       });
 
       const imageBoxes = document.querySelectorAll('.materialboxed');
       M.Materialbox.init(imageBoxes);
     });
-  }
+  };
 
   renderFilterTabs = () => {
     return (
@@ -60,13 +69,18 @@ class Gallery extends Component {
           </a>
         </li>
         <li class="tab col s3">
-          <a ref={this.hairTabRef} href="#hair">
-            Hair
+          <a ref={this.hairTabRef} href="#hairstyle">
+            Hair Styling
           </a>
         </li>
         <li class="tab col s3">
-          <a ref={this.nailsTabRef} href="#nails">
-            Nails
+          <a ref={this.nailsTabRef} href="#nailcare">
+            Nail Care
+          </a>
+        </li>
+        <li class="tab col s3">
+          <a ref={this.skinTabRef} href="#skincare">
+            Skin Care
           </a>
         </li>
       </ul>
@@ -92,7 +106,7 @@ class Gallery extends Component {
   render() {
     return (
       <main className="main">
-        <Banner title="GALLERY OF STYLES" />
+        <Banner title="OUR GALLERY" />
         <div className="container">
           <div className="row">
             <div class="col s12">{this.renderFilterTabs()}</div>

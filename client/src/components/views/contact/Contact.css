@@ -1,0 +1,11 @@
+.map-contact .map-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  height: 300px;
+}
+
+@media (min-width: 1200px) {
+  .map-contact .map-wrapper {
+    height: 460px;
+  }
+}

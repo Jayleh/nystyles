@@ -44,7 +44,7 @@
   height: auto;
 }
 
-.map-wrapper {
+.map-landing .map-wrapper {
   width: 100%;
   max-width: 700px;
   height: 300px;
@@ -90,7 +90,7 @@
     max-width: 380px;
   }
 
-  .map-wrapper {
+  .map-landing .map-wrapper {
     height: 380px;
   }
 }

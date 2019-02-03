@@ -36,4 +36,9 @@ body {
 
 .btn {
   background: linear-gradient(to right, #aaaaff, #fcbaf8);
+  transition: 0.7s all;
+}
+
+.btn:hover {
+  background-position: right center;
 }
