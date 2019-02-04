@@ -5,8 +5,8 @@ import React, { Component, createRef } from 'react';
 import './Slider.css';
 
 class Slider extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.slider = createRef();
   }

@@ -10,8 +10,8 @@ import Banner from '../../banner/Banner';
 import './Gallery.css';
 
 class Gallery extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.tabsRef = createRef();
     this.gridRef = createRef();

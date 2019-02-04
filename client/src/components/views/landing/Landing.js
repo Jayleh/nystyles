@@ -19,8 +19,8 @@ import girl from '../../../assets/images/girl.jpg';
 import './Landing.css';
 
 class Landing extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.collapsible = createRef();
     this.materialboxed = createRef();

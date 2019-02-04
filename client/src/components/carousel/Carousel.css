@@ -2,6 +2,21 @@
   z-index: 996 !important;
 }
 
+.carousel .indicator-item {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.carousel li.active {
+  /* background: linear-gradient(to right, #aaaaff, #fcbaf8); */
+  background-color: rgba(252, 186, 248, 0.65) !important;
+}
+
+.carousel .indicator-item {
+  height: 12px !important;
+  width: 12px !important;
+  margin: 15px 5px !important;
+}
+
 .carousel-hero .carousel,
 .carousel-hero .carousel-item {
   height: 400px !important;

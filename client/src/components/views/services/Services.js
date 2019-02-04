@@ -12,8 +12,8 @@ import girl from '../../../assets/images/girl.jpg';
 import './Services.css';
 
 class Services extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = { serviceFocus: 'Hair Styling' };
 

@@ -3,6 +3,11 @@
   max-width: 700px;
 }
 
+.collapsible-pricing li.active .collapsible-header {
+  background: rgba(170, 170, 255, 0.7);
+  transition: 1.5s;
+}
+
 .collapsible-pricing .collapsible-body li {
   padding: 10px 0;
   border-bottom: 1px dashed #ddd;

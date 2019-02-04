@@ -11,13 +11,14 @@
 }
 
 .slider .indicators .indicator-item {
-  height: 10px !important;
-  width: 10px !important;
-  margin: 24px 4px !important;
+  height: 12px !important;
+  width: 12px !important;
+  margin: 15px 5px !important;
 }
 
 .slider .indicators .indicator-item.active {
-  background-color: #fff;
+  /* background: linear-gradient(to right, #aaaaff, #fcbaf8); */
+  background-color: rgba(252, 186, 248, 0.65) !important;
 }
 
 @media (min-width: 576px) {
