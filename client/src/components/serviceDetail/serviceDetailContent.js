@@ -2,7 +2,10 @@ export default [
   {
     service: 'Hair Styling',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'With over 20 years of salon service and experience, our cosmetologists ' +
+      'are ready to meet all your hair needs! Whether you’re looking to pamper ' +
+      "yourself or find your next go-to salon at affordable pricing, we've got " +
+      'it all.',
     subservices: [
       {
         subservice: 'Cut',
@@ -21,7 +24,11 @@ export default [
       }
     ],
     subDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Haircuts are available for all members of the family and the list of ' +
+      'services is endless: perms, coloring, Brazilian Blow-Out Treatment, ' +
+      'Japanese Permanent Straightening, hair extensions, and balayage just to ' +
+      'name a few. Find a simple, comprehensive list of pricing in the Prices ' +
+      'tab.',
     images: [
       { imgSrc: 'https://picsum.photos/200/?random', imgAlt: '' },
       { imgSrc: 'https://picsum.photos/200/?random', imgAlt: '' },
@@ -32,7 +39,11 @@ export default [
   {
     service: 'Nails Care',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'At New York Styles Salon & Spa, pamper yourself and get the star ' +
+      "treatment you deserve. Relax in our pedicure massage chairs and we'll " +
+      'do the rest. Have a design in mind? Bring it in or show us on your ' +
+      'phone! We also have hundreds of designs to choose from, so the ' +
+      'possibilities are endless.',
     subservices: [
       {
         subservice: 'Manicure',

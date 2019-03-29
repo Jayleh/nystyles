@@ -21,19 +21,15 @@ export default [
   {
     imgSrc: massage,
     imgAlt: 'massage',
-    title: 'Body Treatments',
+    title: 'Facial',
     price: '$200',
-    subservices: [
-      'Purifying Back',
-      'Medicating Clearing',
-      'Multivitamin Powder'
-    ]
+    subservices: ['Eyelash Extensions', 'Brow Shaping', 'Threading']
   },
   {
     imgSrc: wax,
     imgAlt: 'wax',
-    title: 'Eyelashes',
+    title: 'Spa',
     price: '$200',
-    subservices: ['Brazilian', 'Bikini', 'Full Legs']
+    subservices: ['Waxing', 'Facials', 'Body Treatments']
   }
 ];

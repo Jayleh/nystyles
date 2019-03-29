@@ -87,7 +87,8 @@ class Header extends Component {
                   <div className="col s12 l6">
                     <div className="widget-social white-text">
                       <div>
-                        Open Hours: 10am-7pm Mon-Sat &#124; 10am-5pm Sun
+                        Open Hours: 9:30am-7pm Mon-Fri &#124; 9am-7pm Sat &#124;
+                        Closed Sunday
                       </div>
                       <div className="social-links-top-bar">
                         {this.renderSocialLinks()}

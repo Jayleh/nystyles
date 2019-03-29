@@ -111,8 +111,10 @@ class Landing extends Component {
               <div className="introduction-hook center">
                 <h4 className="playfair-text">You will look amazing!</h4>
                 <h5>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Located near historic Orange Circle, New York Styles Salon &
+                  Spa is a small business of professional stylists and
+                  estheticians looking to help you achieve all your beauty
+                  needs.
                 </h5>
               </div>
             </div>
