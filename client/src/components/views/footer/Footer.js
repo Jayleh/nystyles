@@ -41,9 +41,9 @@ class Footer extends Component {
             <div className="col s12 l6 info-footer">
               <h5 className="white-text">New York Styles Salon</h5>
               <p>
-                Open Hours: 10am-7pm Mon-Sat
+                Open Hours: 9:30am-7pm Mon-Fri
                 <br />
-                10am-5pm Sun
+                9am-7pm Sat &#124; Closed Sunday
               </p>
               <ul>
                 <li className="white-text">

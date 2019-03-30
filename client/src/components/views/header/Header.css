@@ -34,6 +34,10 @@
   justify-content: center;
 }
 
+.widget-social div:first-child {
+  text-align: center;
+}
+
 .social-links-top-bar a {
   font-size: 16px;
   padding: 0 10px;
@@ -97,10 +101,6 @@
 
   .widget-social div {
     justify-content: center;
-  }
-
-  .widget-social div:first-child {
-    text-align: center;
   }
 }
 
